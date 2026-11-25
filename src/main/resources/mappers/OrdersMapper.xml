@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wangzhoujun17.mapper.OrdersMapper">
+
+    <resultMap type="Orders" id="ordersResult">
+        <id     property="id"        column="id"/>
+        <result property="userId"    column="user_id"/>
+        <result property="orderDate" column="order_date"/>
+    </resultMap>
+
+    <resultMap type="Orders" id="OrdersWithProductResult2" extends="ordersResult">
+        <collection property="productList" ofType="Products" notNullColumn="pid">
+            <id     property="id"    column="pid"/>
+            <result property="name"  column="pname"/>
+            <result property="price" column="price"/>
+            <result property="stock" column="stock"/>
+            <result property="orderedQuantity" column="quantity"/>
+        </collection>
+    </resultMap>
+
+    <select id="findOrdersWithProductByJoin" parameterType="int"
+            resultMap="OrdersWithProductResult2">
+        select o.id, o.user_id, o.order_date,
+               p.id as pid, p.name as pname, p.price, p.stock, od.quantity
+        from orders o
+        left join orderdetails od on od.order_id = o.id
+        left join products p      on p.id = od.product_id
+        where o.id = #{id}
+        order by p.id
+    </select>
+
+</mapper>
