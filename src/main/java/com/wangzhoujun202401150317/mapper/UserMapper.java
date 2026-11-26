@@ -1,6 +1,6 @@
-package com.wangzhoujun17.mapper;
+package com.wangzhoujun202401150317.mapper;
 
-import com.wangzhoujun17.po.Users;
+import com.wangzhoujun202401150317.po.Users;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;

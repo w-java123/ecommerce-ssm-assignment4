@@ -1,8 +1,8 @@
-package com.wangzhoujun17.service;
+package com.wangzhoujun202401150317.service;
 
-import com.wangzhoujun17.mapper.OrderDetailMapper;
-import com.wangzhoujun17.mapper.OrdersMapper;
-import com.wangzhoujun17.po.Orders;
+import com.wangzhoujun202401150317.mapper.OrderDetailMapper;
+import com.wangzhoujun202401150317.mapper.OrdersMapper;
+import com.wangzhoujun202401150317.po.Orders;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

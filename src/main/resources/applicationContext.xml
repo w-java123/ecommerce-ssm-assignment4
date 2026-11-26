@@ -11,7 +11,7 @@
        http://www.springframework.org/schema/tx/spring-tx.xsd">
     <!-- 1 读取 db.properties -->
     <context:property-placeholder location="classpath:db.properties,classpath:db.local.properties" ignore-resource-not-found="true"/>
-    <context:component-scan base-package="com.wangzhoujun17.service"/>
+    <context:component-scan base-package="com.wangzhoujun202401150317.service"/>
     <!-- 2 配置数据源 -->
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
         <property name="driverClassName" value="${jdbc.driver}"/>
@@ -23,12 +23,12 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="mapperLocations" value="classpath*:mappers/*Mapper.xml"/>
-        <property name="typeAliasesPackage" value="com.wangzhoujun17.po"/>
+        <property name="typeAliasesPackage" value="com.wangzhoujun202401150317.po"/>
         <property name="configLocation" value="classpath:mybatis-config.xml"/>
     </bean>
     <!-- 4 Mapper 代理开发：扫描 dao 包，自动生成实现 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.wangzhoujun17.mapper"/>
+        <property name="basePackage" value="com.wangzhoujun202401150317.mapper"/>
     </bean>
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>

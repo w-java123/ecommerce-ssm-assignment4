@@ -1,14 +1,14 @@
-package com.wangzhoujun17.controller;
+package com.wangzhoujun202401150317.controller;
 
-import com.wangzhoujun17.mapper.OrderDetailMapper;
-import com.wangzhoujun17.mapper.OrdersMapper;
-import com.wangzhoujun17.mapper.ProductMapper;
-import com.wangzhoujun17.mapper.UserMapper;
-import com.wangzhoujun17.po.OrderDetails;
-import com.wangzhoujun17.po.Orders;
-import com.wangzhoujun17.po.Products;
-import com.wangzhoujun17.po.Users;
-import com.wangzhoujun17.service.OrdersService;
+import com.wangzhoujun202401150317.mapper.OrderDetailMapper;
+import com.wangzhoujun202401150317.mapper.OrdersMapper;
+import com.wangzhoujun202401150317.mapper.ProductMapper;
+import com.wangzhoujun202401150317.mapper.UserMapper;
+import com.wangzhoujun202401150317.po.OrderDetails;
+import com.wangzhoujun202401150317.po.Orders;
+import com.wangzhoujun202401150317.po.Products;
+import com.wangzhoujun202401150317.po.Users;
+import com.wangzhoujun202401150317.service.OrdersService;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;

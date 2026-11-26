@@ -1,4 +1,4 @@
-package com.wangzhoujun17.po;
+package com.wangzhoujun202401150317.po;
 
 import java.io.Serializable;
 
